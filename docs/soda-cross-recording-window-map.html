@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Soda - Cross-recording window map</title>
+<style>
+*{box-sizing:border-box}body{margin:0;padding:32px;background:#020617;color:#e2e8f0;font:15px/1.6 system-ui,sans-serif}
+main{max-width:1180px;margin:auto}h1{font-size:30px;margin:0}h2{font-size:22px;margin-top:32px}
+.muted{color:#94a3b8}.notice{padding:18px;border:1px solid #fbbf24;border-radius:12px;background:#211b14}
+.panel{border:1px solid #334155;border-radius:14px;background:#0f172a;padding:20px;margin:20px 0;overflow:auto}
+svg{width:100%;display:block}svg text{font:17px system-ui,sans-serif;fill:#e2e8f0}
+svg .small{font-size:14px;fill:#cbd5e1}svg .core{fill:#083344;stroke:#22d3ee;stroke-width:1.5}
+svg .event{fill:#2e2050;stroke:#a78bfa;stroke-width:1.5}svg .offer{fill:#34240c;stroke:#fbbf24;stroke-width:1.5}
+svg .route{fill:none;stroke:#fbbf24;stroke-width:2;stroke-dasharray:7 5;marker-end:url(#arrow)}
+a{color:#67e8f9}table{border-collapse:collapse;width:100%;font-size:14px}
+td,th{text-align:left;padding:12px;border-bottom:1px solid #334155;vertical-align:top}th{color:#a5f3fc}
+code{font-size:12px;overflow-wrap:anywhere}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.cards article{padding:18px;border:1px solid #334155;border-radius:12px;background:#0f172a}
+@media(max-width:700px){body{padding:16px}h1{font-size:25px}}
+</style>
+</head>
+<body><main>
+<h1>Soda - Cross-recording window map</h1>
+<p class="muted">Comparative reflection across recordings 1-7 · 27 October 2026</p>
+<p class="notice"><strong>A shared structure, not one continuous journey.</strong>
+Window content was reread on historical review sheets. The grouping below is an
+analyst interpretation; dashed arrows are proposed routes, not verified taps.
+Recordings must not be joined to invent missing transitions. Historical analyst
+candidates are not equivalent to Victoria's current approved frames.</p>
+
+<h2>1. Three play contexts, not three unrelated games</h2>
+<div class="panel">
+<svg viewBox="0 0 1100 480" role="img" aria-label="Three proposed routes through numbered levels, mastery levels and cake levels">
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#fbbf24"/></marker></defs>
+<path class="route" d="M245 80H290M535 80H580M825 80H870"/>
+<path class="route" d="M245 230H290M535 230H580M825 230H870"/>
+<path class="route" d="M245 380H290M535 380H580M825 380H870"/>
+<rect class="core" x="0" y="25" width="245" height="110" rx="8"/>
+<text x="15" y="55">Numbered-level context</text><text class="small" x="15" y="83">Map / level selection</text><text class="small" x="15" y="110">V1, V4, V6, V7 examples</text>
+<rect class="core" x="290" y="25" width="245" height="110" rx="8"/>
+<text x="305" y="55">Pre-level</text><text class="small" x="305" y="83">Objective / boosters / Play</text><text class="small" x="305" y="110">Difficulty and streak variants</text>
+<rect class="core" x="580" y="25" width="245" height="110" rx="8"/>
+<text x="595" y="55">Gameplay</text><text class="small" x="595" y="83">Board / moves / objectives</text><text class="small" x="595" y="110">Optional extra-moves overlay</text>
+<rect class="core" x="870" y="25" width="230" height="110" rx="8"/>
+<text x="885" y="55">Result / feedback</text><text class="small" x="885" y="83">Stars / Next</text><text class="small" x="885" y="110">Possible event interruptions</text>
+<rect class="event" x="0" y="175" width="245" height="110" rx="8"/>
+<text x="15" y="205">Mastery context</text><text class="small" x="15" y="233">Portal tutorial / doorway</text><text class="small" x="15" y="260">V5: 1-7 seconds</text>
+<rect class="event" x="290" y="175" width="245" height="110" rx="8"/>
+<text x="305" y="205">Mastery pre-level</text><text class="small" x="305" y="233">Mode-labelled objective</text><text class="small" x="305" y="260">V5: 7 and 126 seconds</text>
+<rect class="core" x="580" y="175" width="245" height="110" rx="8"/>
+<text x="595" y="205">Gameplay</text><text class="small" x="595" y="233">Shared board family</text><text class="small" x="595" y="260">Different context retained</text>
+<rect class="event" x="870" y="175" width="230" height="110" rx="8"/>
+<text x="885" y="205">Mastery result</text><text class="small" x="885" y="233">Mastery label / stars</text><text class="small" x="885" y="260">V5: 107 and 222 seconds</text>
+<rect class="event" x="0" y="325" width="245" height="110" rx="8"/>
+<text x="15" y="355">Cake context</text><text class="small" x="15" y="383">Tutorial / team cake</text><text class="small" x="15" y="410">V2: 0-12 seconds</text>
+<rect class="event" x="290" y="325" width="245" height="110" rx="8"/>
+<text x="305" y="355">Recipe panel</text><text class="small" x="305" y="383">Objective / Prepare</text><text class="small" x="305" y="410">V2: 13 seconds</text>
+<rect class="core" x="580" y="325" width="245" height="110" rx="8"/>
+<text x="595" y="355">Gameplay</text><text class="small" x="595" y="383">Chef-hat continuation prompt</text><text class="small" x="595" y="410">V2: 320 seconds</text>
+<rect class="event" x="870" y="325" width="230" height="110" rx="8"/>
+<text x="885" y="355">Cake progress</text><text class="small" x="885" y="383">Slice / layer / reward</text><text class="small" x="885" y="410">V2: 136s; V6: 66s</text>
+</svg>
+<p class="muted">Dashed amber = candidate navigation. Cyan = shared core family.
+Violet = mode-specific context. Loading and interruptions are omitted for clarity, not asserted absent.</p>
+</div>
+
+<h2>2. What each recording contributes</h2>
+<div class="panel"><table>
+<thead><tr><th>Recording / source ID</th><th>Visible anchors on reviewed sheets</th><th>Implication for the map</th></tr></thead>
+<tbody>
+<tr><td>V1<br><code>ScreenRecording_10-15-2026_11-59-54</code></td><td>Megabomb introduction 0s; recharge instruction 3s; daily missions 60-70s; return pack 73-74s.</td><td>Add onboarding, contextual instructions and return rewards around the core loop. Do not equate every popup with an event destination.</td></tr>
+<tr><td>V2<br><code>ScreenRecording_10-15-2026_12-07-45</code></td><td>Cake tutorial 0-8s; cake 12s; recipe 13s; board 20s; progress 136s; extra-moves prompt 320s.</td><td>A separate mode route with team progress and chef-hat context. Similar board visuals do not make this a numbered-map level.</td></tr>
+<tr><td>V3<br><code>ScreenRecording_10-15-2026_14-05-46</code></td><td>Map 0s; limited offer 10s; Four in a Row mission 20s; map 40s.</td><td>A short inspection of side windows, not a full play loop. Mission selection and offer inspection need their own branches.</td></tr>
+<tr><td>V4<br><code>ScreenRecording_10-15-2026_18-27-32</code></td><td>Level-20000 celebration #5241 at 88.692s; mission grid #23506 at 397.037s; confirmation #24167 at 408.053s.</td><td>Useful milestone case, not the universal template. <a href="soda-video-4-window-map.html">Open the detailed V4 draft.</a></td></tr>
+<tr><td>V5<br><code>ScreenRecording_10-15-2026_20-20-25</code></td><td>Portal welcome 1s; special-level message 3s; mastery entry 7s; mastery results 107/222s; expired rocket 109-112s; bear reward 119-122s.</td><td>Keep mastery distinct from numbered progression. Event feedback is visible in the same recording; scoring eligibility and portal-exit rules remain unverified.</td></tr>
+<tr><td>V6<br><code>ScreenRecording_10-18-2026_20-57-03</code></td><td>Daily-streak recovery 14s; mission-row reward 41s; team points 51-55s; cake-layer reward 66s; store 80-85s; Yeti invitation 110s; numbered level 117s.</td><td>Shows multiple parallel systems and layered feedback. Later numbered levels do not establish how or when mastery ended between sessions.</td></tr>
+<tr><td>V7<br><code>ScreenRecording_10-21-2026_17-29-24</code></td><td>Treasure extension 23s; pearl activity 347-370s; Yeti 636-1474s; cake timeout 1459-1464s; future-start labels 1480s; mission-change confirmation 1556s.</td><td>Add event lifecycle states, a distinct pearl mini-game board and timed ending/re-entry states. Do not model all events as one generic popup.</td></tr>
+</tbody></table></div>
+
+<h2>3. The missing layer in the recording-4-only map</h2>
+<div class="cards">
+<article><h3>Entry and availability</h3><p>Activities hub, invitation, tutorial and start/defer controls are different states.
+V7 at 1480s also shows activities with future-start labels. A card being present does not mean it is playable.</p></article>
+<article><h3>Progress and collection</h3><p>Mission grids, event standings, bear targets, cake slices and pearl boards require different window families.
+Counters changing are usually state variants, not new destinations.</p></article>
+<article><h3>Ending and recovery</h3><p>V5's out-of-fuel message, V7's cake closure and treasure extension prompt are not interchangeable.
+Separate expiration, reward collection and an offer to continue.</p></article>
+</div>
+<h2>4. Modelling decisions</h2>
+<p><strong>Interpretation:</strong> use a shared core loop with a mode context
+(numbered / mastery / cake), plus independent event branches. Represent a window
+as <em>family + mode + lifecycle state</em>. An altered tooltip, objective, reward amount
+or counter should normally remain a variant unless it changes the available actions.</p>
+<p><strong>Interpretation:</strong> treat post-level feedback as a possible sequence of
+overlays, not a direct guaranteed return to the map. Collection screens may update
+several systems, but which level types contribute to which events still needs
+counter-before/counter-after and continuous-action review.</p>
+<p><strong>Commercial observations:</strong> the sheets show offers priced in real
+currency, gold-bar continuation options and free reward prompts. These are separate
+categories; a displayed price or a later resumed board does not by itself prove a
+purchase, a currency deduction or a completed transaction.</p>
+<p class="notice"><strong>Still unknown:</strong> the actual new-content arrival and portal-exit
+journey, universal event eligibility, all failure/retry paths, purchase completion,
+and the complete action edges. Level 20000 is a visible milestone, not proof of the content cap.</p>
+
+<h2>Review basis and limits</h2>
+<p>This comparison reread all five historical V1-V6 selection sheets (129 cards,
+127 unique frames according to the existing review manifest) and all five V7
+selection sheets (110 cards). It is a bounded selected-frame review, not a new
+inspection of every decoded frame or uninterrupted footage. Personal areas were
+already redacted in those sheets. Source-time anchors come from the existing CSV/TSV;
+rounded labels above are not new exact action timestamps.</p>
+<p>Current dashboard snapshot at inspection: V1/V2/V3/V4/V5 retained positive
+counts 22/27/8/55/7; V6/V7 have no retained positives. These counts do not measure
+coverage or final acceptance. The V5 selections may still be in progress.
+Dataset revision:
+<code>3c91526e446a80b8ca195551eeda72c3957680dfb6785b85995bce84ef4b1708</code>.
+No selections were changed and no holdout data was fitted to the experimental ranker.</p>
+<details><summary>Local evidence files</summary>
+<p><a href="../.ai-work/temporary/figma-soda-flow/connected-flow-frames.csv">V1-V6 source frames, times and hashes</a> ·
+<a href="../.ai-work/temporary/figma-soda-flow/seven-video-review/v7-selection.tsv">V7 review anchors</a> ·
+<a href="../.ai-work/temporary/figma-soda-flow/seven-video-review/review-manifest.json">Historical scope and limitations</a></p>
+<p>V1-V6 sheets:
+<a href="../.ai-work/temporary/figma-soda-flow/seven-video-review/previous-selection-00.jpg">1</a>,
+<a href="../.ai-work/temporary/figma-soda-flow/seven-video-review/previous-selection-01.jpg">2</a>,
+<a href="../.ai-work/temporary/figma-soda-flow/seven-video-review/previous-selection-02.jpg">3</a>,
+<a href="../.ai-work/temporary/figma-soda-flow/seven-video-review/previous-selection-03.jpg">4</a>,
+<a href="../.ai-work/temporary/figma-soda-flow/seven-video-review/previous-selection-04.jpg">5</a>.
+V7 sheets:
+<a href="../.ai-work/temporary/figma-soda-flow/seven-video-review/v7-selected-00.jpg">1</a>,
+<a href="../.ai-work/temporary/figma-soda-flow/seven-video-review/v7-selected-01.jpg">2</a>,
+<a href="../.ai-work/temporary/figma-soda-flow/seven-video-review/v7-selected-02.jpg">3</a>,
+<a href="../.ai-work/temporary/figma-soda-flow/seven-video-review/v7-selected-03.jpg">4</a>,
+<a href="../.ai-work/temporary/figma-soda-flow/seven-video-review/v7-selected-04.jpg">5</a>.</p>
+</details>
+<p class="muted">Local analysis only. No dashboard, Miro, FigJam or model deployment changes.</p>
+</main></body></html>

@@ -1,0 +1,16 @@
+flowchart TD
+  f1["Frame 1 | 0.000s"]
+  f25["Frame 25 | 0.400s"]
+  f59["Frame 59 | 1.000s"]
+  f119["Frame 119 | 2.000s"]
+  f354["Frame 354 | 5.933s"]
+  f404["Frame 404 | 6.867s"]
+  f567["Frame 567 | 9.602s"]
+  f686["Frame 686 | 11.668s"]
+  f1 -->|later in recording| f25
+  f25 -->|later in recording| f59
+  f59 -->|later in recording| f119
+  f119 -->|later in recording| f354
+  f354 -->|later in recording| f404
+  f404 -->|later in recording| f567
+  f567 -->|later in recording| f686

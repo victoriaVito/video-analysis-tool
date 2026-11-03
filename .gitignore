@@ -1,0 +1,12 @@
+.ai-work/
+data/
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+.env
+*.mp4
+*.mov
+*.mkv
+*.webm
+*.log

@@ -1,0 +1,1154 @@
+{
+  "video": "ScreenRecording_10-18-2026_20-57-03",
+  "revision": "8ea84d1e1f8c1def217aa57e59d943a7e12340b63bdeb02ba4117cf4bb977061",
+  "scope": "All approved, non-trashed frames in this recording, independent of review window.",
+  "meaning": "Chronological sequence only; arrows do not assert actions, causality or branches.",
+  "nodes": [
+    {
+      "id": "f665",
+      "frame": 665,
+      "time": 13.501667,
+      "title": "Frame 665",
+      "note": "",
+      "image": "/api/frame?video=5&frame=665&width=160"
+    },
+    {
+      "id": "f846",
+      "frame": 846,
+      "time": 16.685,
+      "title": "Frame 846",
+      "note": "",
+      "image": "/api/frame?video=5&frame=846&width=160"
+    },
+    {
+      "id": "f1091",
+      "frame": 1091,
+      "time": 20.818333,
+      "title": "Frame 1091",
+      "note": "",
+      "image": "/api/frame?video=5&frame=1091&width=160"
+    },
+    {
+      "id": "f1450",
+      "frame": 1450,
+      "time": 26.885,
+      "title": "Frame 1450",
+      "note": "",
+      "image": "/api/frame?video=5&frame=1450&width=160"
+    },
+    {
+      "id": "f1851",
+      "frame": 1851,
+      "time": 33.836667,
+      "title": "Frame 1851",
+      "note": "",
+      "image": "/api/frame?video=5&frame=1851&width=160"
+    },
+    {
+      "id": "f1888",
+      "frame": 1888,
+      "time": 34.47,
+      "title": "Frame 1888",
+      "note": "",
+      "image": "/api/frame?video=5&frame=1888&width=160"
+    },
+    {
+      "id": "f2032",
+      "frame": 2032,
+      "time": 36.92,
+      "title": "Frame 2032",
+      "note": "",
+      "image": "/api/frame?video=5&frame=2032&width=160"
+    },
+    {
+      "id": "f2092",
+      "frame": 2092,
+      "time": 37.92,
+      "title": "Frame 2092",
+      "note": "",
+      "image": "/api/frame?video=5&frame=2092&width=160"
+    },
+    {
+      "id": "f2152",
+      "frame": 2152,
+      "time": 38.92,
+      "title": "Frame 2152",
+      "note": "",
+      "image": "/api/frame?video=5&frame=2152&width=160"
+    },
+    {
+      "id": "f2272",
+      "frame": 2272,
+      "time": 40.92,
+      "title": "Frame 2272",
+      "note": "",
+      "image": "/api/frame?video=5&frame=2272&width=160"
+    },
+    {
+      "id": "f2381",
+      "frame": 2381,
+      "time": 42.92,
+      "title": "Frame 2381",
+      "note": "",
+      "image": "/api/frame?video=5&frame=2381&width=160"
+    },
+    {
+      "id": "f2561",
+      "frame": 2561,
+      "time": 45.921667,
+      "title": "Frame 2561",
+      "note": "",
+      "image": "/api/frame?video=5&frame=2561&width=160"
+    },
+    {
+      "id": "f2673",
+      "frame": 2673,
+      "time": 47.921667,
+      "title": "Frame 2673",
+      "note": "",
+      "image": "/api/frame?video=5&frame=2673&width=160"
+    },
+    {
+      "id": "f2725",
+      "frame": 2725,
+      "time": 48.921667,
+      "title": "Frame 2725",
+      "note": "",
+      "image": "/api/frame?video=5&frame=2725&width=160"
+    },
+    {
+      "id": "f2776",
+      "frame": 2776,
+      "time": 49.921667,
+      "title": "Frame 2776",
+      "note": "",
+      "image": "/api/frame?video=5&frame=2776&width=160"
+    },
+    {
+      "id": "f2836",
+      "frame": 2836,
+      "time": 50.921667,
+      "title": "Frame 2836",
+      "note": "",
+      "image": "/api/frame?video=5&frame=2836&width=160"
+    },
+    {
+      "id": "f2956",
+      "frame": 2956,
+      "time": 52.921667,
+      "title": "Frame 2956",
+      "note": "",
+      "image": "/api/frame?video=5&frame=2956&width=160"
+    },
+    {
+      "id": "f3135",
+      "frame": 3135,
+      "time": 55.921667,
+      "title": "Frame 3135",
+      "note": "",
+      "image": "/api/frame?video=5&frame=3135&width=160"
+    },
+    {
+      "id": "f3244",
+      "frame": 3244,
+      "time": 57.921667,
+      "title": "Frame 3244",
+      "note": "",
+      "image": "/api/frame?video=5&frame=3244&width=160"
+    },
+    {
+      "id": "f3304",
+      "frame": 3304,
+      "time": 58.921667,
+      "title": "Frame 3304",
+      "note": "",
+      "image": "/api/frame?video=5&frame=3304&width=160"
+    },
+    {
+      "id": "f3353",
+      "frame": 3353,
+      "time": 59.921667,
+      "title": "Frame 3353",
+      "note": "",
+      "image": "/api/frame?video=5&frame=3353&width=160"
+    },
+    {
+      "id": "f3533",
+      "frame": 3533,
+      "time": 62.921667,
+      "title": "Frame 3533",
+      "note": "",
+      "image": "/api/frame?video=5&frame=3533&width=160"
+    },
+    {
+      "id": "f3710",
+      "frame": 3710,
+      "time": 65.923333,
+      "title": "Frame 3710",
+      "note": "",
+      "image": "/api/frame?video=5&frame=3710&width=160"
+    },
+    {
+      "id": "f3768",
+      "frame": 3768,
+      "time": 66.923333,
+      "title": "Frame 3768",
+      "note": "",
+      "image": "/api/frame?video=5&frame=3768&width=160"
+    },
+    {
+      "id": "f4063",
+      "frame": 4063,
+      "time": 71.923333,
+      "title": "Frame 4063",
+      "note": "",
+      "image": "/api/frame?video=5&frame=4063&width=160"
+    },
+    {
+      "id": "f4243",
+      "frame": 4243,
+      "time": 74.923333,
+      "title": "Frame 4243",
+      "note": "",
+      "image": "/api/frame?video=5&frame=4243&width=160"
+    },
+    {
+      "id": "f4295",
+      "frame": 4295,
+      "time": 75.923333,
+      "title": "Frame 4295",
+      "note": "",
+      "image": "/api/frame?video=5&frame=4295&width=160"
+    },
+    {
+      "id": "f4415",
+      "frame": 4415,
+      "time": 77.923333,
+      "title": "Frame 4415",
+      "note": "",
+      "image": "/api/frame?video=5&frame=4415&width=160"
+    },
+    {
+      "id": "f4466",
+      "frame": 4466,
+      "time": 78.923333,
+      "title": "Frame 4466",
+      "note": "",
+      "image": "/api/frame?video=5&frame=4466&width=160"
+    },
+    {
+      "id": "f4586",
+      "frame": 4586,
+      "time": 80.923333,
+      "title": "Frame 4586",
+      "note": "",
+      "image": "/api/frame?video=5&frame=4586&width=160"
+    },
+    {
+      "id": "f4706",
+      "frame": 4706,
+      "time": 82.925,
+      "title": "Frame 4706",
+      "note": "",
+      "image": "/api/frame?video=5&frame=4706&width=160"
+    },
+    {
+      "id": "f4826",
+      "frame": 4826,
+      "time": 84.925,
+      "title": "Frame 4826",
+      "note": "",
+      "image": "/api/frame?video=5&frame=4826&width=160"
+    },
+    {
+      "id": "f4940",
+      "frame": 4940,
+      "time": 86.925,
+      "title": "Frame 4940",
+      "note": "",
+      "image": "/api/frame?video=5&frame=4940&width=160"
+    },
+    {
+      "id": "f5057",
+      "frame": 5057,
+      "time": 88.925,
+      "title": "Frame 5057",
+      "note": "",
+      "image": "/api/frame?video=5&frame=5057&width=160"
+    },
+    {
+      "id": "f5171",
+      "frame": 5171,
+      "time": 90.925,
+      "title": "Frame 5171",
+      "note": "",
+      "image": "/api/frame?video=5&frame=5171&width=160"
+    },
+    {
+      "id": "f5406",
+      "frame": 5406,
+      "time": 94.925,
+      "title": "Frame 5406",
+      "note": "",
+      "image": "/api/frame?video=5&frame=5406&width=160"
+    },
+    {
+      "id": "f6293",
+      "frame": 6293,
+      "time": 109.926667,
+      "title": "Frame 6293",
+      "note": "",
+      "image": "/api/frame?video=5&frame=6293&width=160"
+    },
+    {
+      "id": "f6403",
+      "frame": 6403,
+      "time": 111.926667,
+      "title": "Frame 6403",
+      "note": "",
+      "image": "/api/frame?video=5&frame=6403&width=160"
+    },
+    {
+      "id": "f6580",
+      "frame": 6580,
+      "time": 114.926667,
+      "title": "Frame 6580",
+      "note": "",
+      "image": "/api/frame?video=5&frame=6580&width=160"
+    },
+    {
+      "id": "f6646",
+      "frame": 6646,
+      "time": 116.026667,
+      "title": "Frame 6646",
+      "note": "",
+      "image": "/api/frame?video=5&frame=6646&width=160"
+    },
+    {
+      "id": "f6696",
+      "frame": 6696,
+      "time": 117.026667,
+      "title": "Frame 6696",
+      "note": "",
+      "image": "/api/frame?video=5&frame=6696&width=160"
+    },
+    {
+      "id": "f6793",
+      "frame": 6793,
+      "time": 119.028333,
+      "title": "Frame 6793",
+      "note": "",
+      "image": "/api/frame?video=5&frame=6793&width=160"
+    },
+    {
+      "id": "f6853",
+      "frame": 6853,
+      "time": 120.028333,
+      "title": "Frame 6853",
+      "note": "",
+      "image": "/api/frame?video=5&frame=6853&width=160"
+    },
+    {
+      "id": "f7090",
+      "frame": 7090,
+      "time": 124.028333,
+      "title": "Frame 7090",
+      "note": "",
+      "image": "/api/frame?video=5&frame=7090&width=160"
+    },
+    {
+      "id": "f7208",
+      "frame": 7208,
+      "time": 126.028333,
+      "title": "Frame 7208",
+      "note": "",
+      "image": "/api/frame?video=5&frame=7208&width=160"
+    },
+    {
+      "id": "f7322",
+      "frame": 7322,
+      "time": 128.028333,
+      "title": "Frame 7322",
+      "note": "",
+      "image": "/api/frame?video=5&frame=7322&width=160"
+    },
+    {
+      "id": "f10156",
+      "frame": 10156,
+      "time": 176.066667,
+      "title": "Frame 10156",
+      "note": "",
+      "image": "/api/frame?video=5&frame=10156&width=160"
+    },
+    {
+      "id": "f10275",
+      "frame": 10275,
+      "time": 178.066667,
+      "title": "Frame 10275",
+      "note": "",
+      "image": "/api/frame?video=5&frame=10275&width=160"
+    },
+    {
+      "id": "f10385",
+      "frame": 10385,
+      "time": 180.066667,
+      "title": "Frame 10385",
+      "note": "",
+      "image": "/api/frame?video=5&frame=10385&width=160"
+    },
+    {
+      "id": "f10445",
+      "frame": 10445,
+      "time": 181.066667,
+      "title": "Frame 10445",
+      "note": "",
+      "image": "/api/frame?video=5&frame=10445&width=160"
+    },
+    {
+      "id": "f10618",
+      "frame": 10618,
+      "time": 184.066667,
+      "title": "Frame 10618",
+      "note": "",
+      "image": "/api/frame?video=5&frame=10618&width=160"
+    },
+    {
+      "id": "f10678",
+      "frame": 10678,
+      "time": 185.066667,
+      "title": "Frame 10678",
+      "note": "",
+      "image": "/api/frame?video=5&frame=10678&width=160"
+    },
+    {
+      "id": "f10736",
+      "frame": 10736,
+      "time": 186.066667,
+      "title": "Frame 10736",
+      "note": "",
+      "image": "/api/frame?video=5&frame=10736&width=160"
+    },
+    {
+      "id": "f10789",
+      "frame": 10789,
+      "time": 187.066667,
+      "title": "Frame 10789",
+      "note": "",
+      "image": "/api/frame?video=5&frame=10789&width=160"
+    },
+    {
+      "id": "f10849",
+      "frame": 10849,
+      "time": 188.066667,
+      "title": "Frame 10849",
+      "note": "",
+      "image": "/api/frame?video=5&frame=10849&width=160"
+    },
+    {
+      "id": "f10908",
+      "frame": 10908,
+      "time": 189.066667,
+      "title": "Frame 10908",
+      "note": "",
+      "image": "/api/frame?video=5&frame=10908&width=160"
+    },
+    {
+      "id": "f10964",
+      "frame": 10964,
+      "time": 190.066667,
+      "title": "Frame 10964",
+      "note": "",
+      "image": "/api/frame?video=5&frame=10964&width=160"
+    },
+    {
+      "id": "f11024",
+      "frame": 11024,
+      "time": 191.068333,
+      "title": "Frame 11024",
+      "note": "",
+      "image": "/api/frame?video=5&frame=11024&width=160"
+    },
+    {
+      "id": "f11081",
+      "frame": 11081,
+      "time": 192.068333,
+      "title": "Frame 11081",
+      "note": "",
+      "image": "/api/frame?video=5&frame=11081&width=160"
+    },
+    {
+      "id": "f11194",
+      "frame": 11194,
+      "time": 194.068333,
+      "title": "Frame 11194",
+      "note": "",
+      "image": "/api/frame?video=5&frame=11194&width=160"
+    },
+    {
+      "id": "f11254",
+      "frame": 11254,
+      "time": 195.068333,
+      "title": "Frame 11254",
+      "note": "",
+      "image": "/api/frame?video=5&frame=11254&width=160"
+    },
+    {
+      "id": "f11314",
+      "frame": 11314,
+      "time": 196.068333,
+      "title": "Frame 11314",
+      "note": "",
+      "image": "/api/frame?video=5&frame=11314&width=160"
+    },
+    {
+      "id": "f11374",
+      "frame": 11374,
+      "time": 197.068333,
+      "title": "Frame 11374",
+      "note": "",
+      "image": "/api/frame?video=5&frame=11374&width=160"
+    },
+    {
+      "id": "f11432",
+      "frame": 11432,
+      "time": 198.068333,
+      "title": "Frame 11432",
+      "note": "",
+      "image": "/api/frame?video=5&frame=11432&width=160"
+    },
+    {
+      "id": "f11492",
+      "frame": 11492,
+      "time": 199.068333,
+      "title": "Frame 11492",
+      "note": "",
+      "image": "/api/frame?video=5&frame=11492&width=160"
+    },
+    {
+      "id": "f14001",
+      "frame": 14001,
+      "time": 241.321667,
+      "title": "Frame 14001",
+      "note": "",
+      "image": "/api/frame?video=5&frame=14001&width=160"
+    },
+    {
+      "id": "f14121",
+      "frame": 14121,
+      "time": 243.321667,
+      "title": "Frame 14121",
+      "note": "",
+      "image": "/api/frame?video=5&frame=14121&width=160"
+    },
+    {
+      "id": "f14481",
+      "frame": 14481,
+      "time": 249.323333,
+      "title": "Frame 14481",
+      "note": "",
+      "image": "/api/frame?video=5&frame=14481&width=160"
+    },
+    {
+      "id": "f14658",
+      "frame": 14658,
+      "time": 252.323333,
+      "title": "Frame 14658",
+      "note": "",
+      "image": "/api/frame?video=5&frame=14658&width=160"
+    },
+    {
+      "id": "f16097",
+      "frame": 16097,
+      "time": 276.325,
+      "title": "Frame 16097",
+      "note": "",
+      "image": "/api/frame?video=5&frame=16097&width=160"
+    },
+    {
+      "id": "f16216",
+      "frame": 16216,
+      "time": 278.325,
+      "title": "Frame 16216",
+      "note": "",
+      "image": "/api/frame?video=5&frame=16216&width=160"
+    },
+    {
+      "id": "f17044",
+      "frame": 17044,
+      "time": 292.326667,
+      "title": "Frame 17044",
+      "note": "",
+      "image": "/api/frame?video=5&frame=17044&width=160"
+    },
+    {
+      "id": "f17271",
+      "frame": 17271,
+      "time": 296.326667,
+      "title": "Frame 17271",
+      "note": "",
+      "image": "/api/frame?video=5&frame=17271&width=160"
+    },
+    {
+      "id": "f17331",
+      "frame": 17331,
+      "time": 297.326667,
+      "title": "Frame 17331",
+      "note": "",
+      "image": "/api/frame?video=5&frame=17331&width=160"
+    },
+    {
+      "id": "f17391",
+      "frame": 17391,
+      "time": 298.326667,
+      "title": "Frame 17391",
+      "note": "",
+      "image": "/api/frame?video=5&frame=17391&width=160"
+    },
+    {
+      "id": "f17451",
+      "frame": 17451,
+      "time": 299.326667,
+      "title": "Frame 17451",
+      "note": "",
+      "image": "/api/frame?video=5&frame=17451&width=160"
+    },
+    {
+      "id": "f17508",
+      "frame": 17508,
+      "time": 300.328333,
+      "title": "Frame 17508",
+      "note": "",
+      "image": "/api/frame?video=5&frame=17508&width=160"
+    },
+    {
+      "id": "f17568",
+      "frame": 17568,
+      "time": 301.328333,
+      "title": "Frame 17568",
+      "note": "",
+      "image": "/api/frame?video=5&frame=17568&width=160"
+    },
+    {
+      "id": "f17683",
+      "frame": 17683,
+      "time": 303.328333,
+      "title": "Frame 17683",
+      "note": "",
+      "image": "/api/frame?video=5&frame=17683&width=160"
+    },
+    {
+      "id": "f17857",
+      "frame": 17857,
+      "time": 306.328333,
+      "title": "Frame 17857",
+      "note": "",
+      "image": "/api/frame?video=5&frame=17857&width=160"
+    },
+    {
+      "id": "f18091",
+      "frame": 18091,
+      "time": 310.311667,
+      "title": "Frame 18091",
+      "note": "",
+      "image": "/api/frame?video=5&frame=18091&width=160"
+    },
+    {
+      "id": "f18264",
+      "frame": 18264,
+      "time": 313.328333,
+      "title": "Frame 18264",
+      "note": "",
+      "image": "/api/frame?video=5&frame=18264&width=160"
+    }
+  ],
+  "edges": [
+    {
+      "from": "f665",
+      "to": "f846",
+      "kind": "chronological",
+      "elapsed_seconds": 3.1833329999999993
+    },
+    {
+      "from": "f846",
+      "to": "f1091",
+      "kind": "chronological",
+      "elapsed_seconds": 4.133333
+    },
+    {
+      "from": "f1091",
+      "to": "f1450",
+      "kind": "chronological",
+      "elapsed_seconds": 6.0666670000000025
+    },
+    {
+      "from": "f1450",
+      "to": "f1851",
+      "kind": "chronological",
+      "elapsed_seconds": 6.951666999999997
+    },
+    {
+      "from": "f1851",
+      "to": "f1888",
+      "kind": "chronological",
+      "elapsed_seconds": 0.6333330000000004
+    },
+    {
+      "from": "f1888",
+      "to": "f2032",
+      "kind": "chronological",
+      "elapsed_seconds": 2.450000000000003
+    },
+    {
+      "from": "f2032",
+      "to": "f2092",
+      "kind": "chronological",
+      "elapsed_seconds": 1.0
+    },
+    {
+      "from": "f2092",
+      "to": "f2152",
+      "kind": "chronological",
+      "elapsed_seconds": 1.0
+    },
+    {
+      "from": "f2152",
+      "to": "f2272",
+      "kind": "chronological",
+      "elapsed_seconds": 2.0
+    },
+    {
+      "from": "f2272",
+      "to": "f2381",
+      "kind": "chronological",
+      "elapsed_seconds": 2.0
+    },
+    {
+      "from": "f2381",
+      "to": "f2561",
+      "kind": "chronological",
+      "elapsed_seconds": 3.0016669999999976
+    },
+    {
+      "from": "f2561",
+      "to": "f2673",
+      "kind": "chronological",
+      "elapsed_seconds": 2.0
+    },
+    {
+      "from": "f2673",
+      "to": "f2725",
+      "kind": "chronological",
+      "elapsed_seconds": 1.0
+    },
+    {
+      "from": "f2725",
+      "to": "f2776",
+      "kind": "chronological",
+      "elapsed_seconds": 1.0
+    },
+    {
+      "from": "f2776",
+      "to": "f2836",
+      "kind": "chronological",
+      "elapsed_seconds": 1.0
+    },
+    {
+      "from": "f2836",
+      "to": "f2956",
+      "kind": "chronological",
+      "elapsed_seconds": 2.0
+    },
+    {
+      "from": "f2956",
+      "to": "f3135",
+      "kind": "chronological",
+      "elapsed_seconds": 3.0
+    },
+    {
+      "from": "f3135",
+      "to": "f3244",
+      "kind": "chronological",
+      "elapsed_seconds": 2.0
+    },
+    {
+      "from": "f3244",
+      "to": "f3304",
+      "kind": "chronological",
+      "elapsed_seconds": 1.0
+    },
+    {
+      "from": "f3304",
+      "to": "f3353",
+      "kind": "chronological",
+      "elapsed_seconds": 1.0
+    },
+    {
+      "from": "f3353",
+      "to": "f3533",
+      "kind": "chronological",
+      "elapsed_seconds": 3.0
+    },
+    {
+      "from": "f3533",
+      "to": "f3710",
+      "kind": "chronological",
+      "elapsed_seconds": 3.001666
+    },
+    {
+      "from": "f3710",
+      "to": "f3768",
+      "kind": "chronological",
+      "elapsed_seconds": 1.0
+    },
+    {
+      "from": "f3768",
+      "to": "f4063",
+      "kind": "chronological",
+      "elapsed_seconds": 5.0
+    },
+    {
+      "from": "f4063",
+      "to": "f4243",
+      "kind": "chronological",
+      "elapsed_seconds": 3.0
+    },
+    {
+      "from": "f4243",
+      "to": "f4295",
+      "kind": "chronological",
+      "elapsed_seconds": 1.0
+    },
+    {
+      "from": "f4295",
+      "to": "f4415",
+      "kind": "chronological",
+      "elapsed_seconds": 2.0
+    },
+    {
+      "from": "f4415",
+      "to": "f4466",
+      "kind": "chronological",
+      "elapsed_seconds": 1.0
+    },
+    {
+      "from": "f4466",
+      "to": "f4586",
+      "kind": "chronological",
+      "elapsed_seconds": 2.0
+    },
+    {
+      "from": "f4586",
+      "to": "f4706",
+      "kind": "chronological",
+      "elapsed_seconds": 2.0016669999999976
+    },
+    {
+      "from": "f4706",
+      "to": "f4826",
+      "kind": "chronological",
+      "elapsed_seconds": 2.0
+    },
+    {
+      "from": "f4826",
+      "to": "f4940",
+      "kind": "chronological",
+      "elapsed_seconds": 2.0
+    },
+    {
+      "from": "f4940",
+      "to": "f5057",
+      "kind": "chronological",
+      "elapsed_seconds": 2.0
+    },
+    {
+      "from": "f5057",
+      "to": "f5171",
+      "kind": "chronological",
+      "elapsed_seconds": 2.0
+    },
+    {
+      "from": "f5171",
+      "to": "f5406",
+      "kind": "chronological",
+      "elapsed_seconds": 4.0
+    },
+    {
+      "from": "f5406",
+      "to": "f6293",
+      "kind": "chronological",
+      "elapsed_seconds": 15.001666999999998
+    },
+    {
+      "from": "f6293",
+      "to": "f6403",
+      "kind": "chronological",
+      "elapsed_seconds": 2.0
+    },
+    {
+      "from": "f6403",
+      "to": "f6580",
+      "kind": "chronological",
+      "elapsed_seconds": 3.0
+    },
+    {
+      "from": "f6580",
+      "to": "f6646",
+      "kind": "chronological",
+      "elapsed_seconds": 1.1000000000000085
+    },
+    {
+      "from": "f6646",
+      "to": "f6696",
+      "kind": "chronological",
+      "elapsed_seconds": 1.0
+    },
+    {
+      "from": "f6696",
+      "to": "f6793",
+      "kind": "chronological",
+      "elapsed_seconds": 2.001666
+    },
+    {
+      "from": "f6793",
+      "to": "f6853",
+      "kind": "chronological",
+      "elapsed_seconds": 1.0
+    },
+    {
+      "from": "f6853",
+      "to": "f7090",
+      "kind": "chronological",
+      "elapsed_seconds": 4.0
+    },
+    {
+      "from": "f7090",
+      "to": "f7208",
+      "kind": "chronological",
+      "elapsed_seconds": 2.0
+    },
+    {
+      "from": "f7208",
+      "to": "f7322",
+      "kind": "chronological",
+      "elapsed_seconds": 2.0
+    },
+    {
+      "from": "f7322",
+      "to": "f10156",
+      "kind": "chronological",
+      "elapsed_seconds": 48.03833399999999
+    },
+    {
+      "from": "f10156",
+      "to": "f10275",
+      "kind": "chronological",
+      "elapsed_seconds": 2.0
+    },
+    {
+      "from": "f10275",
+      "to": "f10385",
+      "kind": "chronological",
+      "elapsed_seconds": 2.0
+    },
+    {
+      "from": "f10385",
+      "to": "f10445",
+      "kind": "chronological",
+      "elapsed_seconds": 1.0
+    },
+    {
+      "from": "f10445",
+      "to": "f10618",
+      "kind": "chronological",
+      "elapsed_seconds": 3.0
+    },
+    {
+      "from": "f10618",
+      "to": "f10678",
+      "kind": "chronological",
+      "elapsed_seconds": 1.0
+    },
+    {
+      "from": "f10678",
+      "to": "f10736",
+      "kind": "chronological",
+      "elapsed_seconds": 1.0
+    },
+    {
+      "from": "f10736",
+      "to": "f10789",
+      "kind": "chronological",
+      "elapsed_seconds": 1.0
+    },
+    {
+      "from": "f10789",
+      "to": "f10849",
+      "kind": "chronological",
+      "elapsed_seconds": 1.0
+    },
+    {
+      "from": "f10849",
+      "to": "f10908",
+      "kind": "chronological",
+      "elapsed_seconds": 1.0
+    },
+    {
+      "from": "f10908",
+      "to": "f10964",
+      "kind": "chronological",
+      "elapsed_seconds": 1.0
+    },
+    {
+      "from": "f10964",
+      "to": "f11024",
+      "kind": "chronological",
+      "elapsed_seconds": 1.0016660000000002
+    },
+    {
+      "from": "f11024",
+      "to": "f11081",
+      "kind": "chronological",
+      "elapsed_seconds": 1.0
+    },
+    {
+      "from": "f11081",
+      "to": "f11194",
+      "kind": "chronological",
+      "elapsed_seconds": 2.0
+    },
+    {
+      "from": "f11194",
+      "to": "f11254",
+      "kind": "chronological",
+      "elapsed_seconds": 1.0
+    },
+    {
+      "from": "f11254",
+      "to": "f11314",
+      "kind": "chronological",
+      "elapsed_seconds": 1.0
+    },
+    {
+      "from": "f11314",
+      "to": "f11374",
+      "kind": "chronological",
+      "elapsed_seconds": 1.0
+    },
+    {
+      "from": "f11374",
+      "to": "f11432",
+      "kind": "chronological",
+      "elapsed_seconds": 1.0
+    },
+    {
+      "from": "f11432",
+      "to": "f11492",
+      "kind": "chronological",
+      "elapsed_seconds": 1.0
+    },
+    {
+      "from": "f11492",
+      "to": "f14001",
+      "kind": "chronological",
+      "elapsed_seconds": 42.253333999999995
+    },
+    {
+      "from": "f14001",
+      "to": "f14121",
+      "kind": "chronological",
+      "elapsed_seconds": 2.0
+    },
+    {
+      "from": "f14121",
+      "to": "f14481",
+      "kind": "chronological",
+      "elapsed_seconds": 6.001666
+    },
+    {
+      "from": "f14481",
+      "to": "f14658",
+      "kind": "chronological",
+      "elapsed_seconds": 3.0
+    },
+    {
+      "from": "f14658",
+      "to": "f16097",
+      "kind": "chronological",
+      "elapsed_seconds": 24.001666999999998
+    },
+    {
+      "from": "f16097",
+      "to": "f16216",
+      "kind": "chronological",
+      "elapsed_seconds": 2.0
+    },
+    {
+      "from": "f16216",
+      "to": "f17044",
+      "kind": "chronological",
+      "elapsed_seconds": 14.001666999999998
+    },
+    {
+      "from": "f17044",
+      "to": "f17271",
+      "kind": "chronological",
+      "elapsed_seconds": 4.0
+    },
+    {
+      "from": "f17271",
+      "to": "f17331",
+      "kind": "chronological",
+      "elapsed_seconds": 1.0
+    },
+    {
+      "from": "f17331",
+      "to": "f17391",
+      "kind": "chronological",
+      "elapsed_seconds": 1.0
+    },
+    {
+      "from": "f17391",
+      "to": "f17451",
+      "kind": "chronological",
+      "elapsed_seconds": 1.0
+    },
+    {
+      "from": "f17451",
+      "to": "f17508",
+      "kind": "chronological",
+      "elapsed_seconds": 1.0016660000000002
+    },
+    {
+      "from": "f17508",
+      "to": "f17568",
+      "kind": "chronological",
+      "elapsed_seconds": 1.0
+    },
+    {
+      "from": "f17568",
+      "to": "f17683",
+      "kind": "chronological",
+      "elapsed_seconds": 2.0
+    },
+    {
+      "from": "f17683",
+      "to": "f17857",
+      "kind": "chronological",
+      "elapsed_seconds": 3.0
+    },
+    {
+      "from": "f17857",
+      "to": "f18091",
+      "kind": "chronological",
+      "elapsed_seconds": 3.9833340000000135
+    },
+    {
+      "from": "f18091",
+      "to": "f18264",
+      "kind": "chronological",
+      "elapsed_seconds": 3.0166659999999865
+    }
+  ],
+  "mermaid": "flowchart TD\n  f665[\"Frame 665 | 13.502s\"]\n  f846[\"Frame 846 | 16.685s\"]\n  f1091[\"Frame 1091 | 20.818s\"]\n  f1450[\"Frame 1450 | 26.885s\"]\n  f1851[\"Frame 1851 | 33.837s\"]\n  f1888[\"Frame 1888 | 34.470s\"]\n  f2032[\"Frame 2032 | 36.920s\"]\n  f2092[\"Frame 2092 | 37.920s\"]\n  f2152[\"Frame 2152 | 38.920s\"]\n  f2272[\"Frame 2272 | 40.920s\"]\n  f2381[\"Frame 2381 | 42.920s\"]\n  f2561[\"Frame 2561 | 45.922s\"]\n  f2673[\"Frame 2673 | 47.922s\"]\n  f2725[\"Frame 2725 | 48.922s\"]\n  f2776[\"Frame 2776 | 49.922s\"]\n  f2836[\"Frame 2836 | 50.922s\"]\n  f2956[\"Frame 2956 | 52.922s\"]\n  f3135[\"Frame 3135 | 55.922s\"]\n  f3244[\"Frame 3244 | 57.922s\"]\n  f3304[\"Frame 3304 | 58.922s\"]\n  f3353[\"Frame 3353 | 59.922s\"]\n  f3533[\"Frame 3533 | 62.922s\"]\n  f3710[\"Frame 3710 | 65.923s\"]\n  f3768[\"Frame 3768 | 66.923s\"]\n  f4063[\"Frame 4063 | 71.923s\"]\n  f4243[\"Frame 4243 | 74.923s\"]\n  f4295[\"Frame 4295 | 75.923s\"]\n  f4415[\"Frame 4415 | 77.923s\"]\n  f4466[\"Frame 4466 | 78.923s\"]\n  f4586[\"Frame 4586 | 80.923s\"]\n  f4706[\"Frame 4706 | 82.925s\"]\n  f4826[\"Frame 4826 | 84.925s\"]\n  f4940[\"Frame 4940 | 86.925s\"]\n  f5057[\"Frame 5057 | 88.925s\"]\n  f5171[\"Frame 5171 | 90.925s\"]\n  f5406[\"Frame 5406 | 94.925s\"]\n  f6293[\"Frame 6293 | 109.927s\"]\n  f6403[\"Frame 6403 | 111.927s\"]\n  f6580[\"Frame 6580 | 114.927s\"]\n  f6646[\"Frame 6646 | 116.027s\"]\n  f6696[\"Frame 6696 | 117.027s\"]\n  f6793[\"Frame 6793 | 119.028s\"]\n  f6853[\"Frame 6853 | 120.028s\"]\n  f7090[\"Frame 7090 | 124.028s\"]\n  f7208[\"Frame 7208 | 126.028s\"]\n  f7322[\"Frame 7322 | 128.028s\"]\n  f10156[\"Frame 10156 | 176.067s\"]\n  f10275[\"Frame 10275 | 178.067s\"]\n  f10385[\"Frame 10385 | 180.067s\"]\n  f10445[\"Frame 10445 | 181.067s\"]\n  f10618[\"Frame 10618 | 184.067s\"]\n  f10678[\"Frame 10678 | 185.067s\"]\n  f10736[\"Frame 10736 | 186.067s\"]\n  f10789[\"Frame 10789 | 187.067s\"]\n  f10849[\"Frame 10849 | 188.067s\"]\n  f10908[\"Frame 10908 | 189.067s\"]\n  f10964[\"Frame 10964 | 190.067s\"]\n  f11024[\"Frame 11024 | 191.068s\"]\n  f11081[\"Frame 11081 | 192.068s\"]\n  f11194[\"Frame 11194 | 194.068s\"]\n  f11254[\"Frame 11254 | 195.068s\"]\n  f11314[\"Frame 11314 | 196.068s\"]\n  f11374[\"Frame 11374 | 197.068s\"]\n  f11432[\"Frame 11432 | 198.068s\"]\n  f11492[\"Frame 11492 | 199.068s\"]\n  f14001[\"Frame 14001 | 241.322s\"]\n  f14121[\"Frame 14121 | 243.322s\"]\n  f14481[\"Frame 14481 | 249.323s\"]\n  f14658[\"Frame 14658 | 252.323s\"]\n  f16097[\"Frame 16097 | 276.325s\"]\n  f16216[\"Frame 16216 | 278.325s\"]\n  f17044[\"Frame 17044 | 292.327s\"]\n  f17271[\"Frame 17271 | 296.327s\"]\n  f17331[\"Frame 17331 | 297.327s\"]\n  f17391[\"Frame 17391 | 298.327s\"]\n  f17451[\"Frame 17451 | 299.327s\"]\n  f17508[\"Frame 17508 | 300.328s\"]\n  f17568[\"Frame 17568 | 301.328s\"]\n  f17683[\"Frame 17683 | 303.328s\"]\n  f17857[\"Frame 17857 | 306.328s\"]\n  f18091[\"Frame 18091 | 310.312s\"]\n  f18264[\"Frame 18264 | 313.328s\"]\n  f665 -->|later in recording| f846\n  f846 -->|later in recording| f1091\n  f1091 -->|later in recording| f1450\n  f1450 -->|later in recording| f1851\n  f1851 -->|later in recording| f1888\n  f1888 -->|later in recording| f2032\n  f2032 -->|later in recording| f2092\n  f2092 -->|later in recording| f2152\n  f2152 -->|later in recording| f2272\n  f2272 -->|later in recording| f2381\n  f2381 -->|later in recording| f2561\n  f2561 -->|later in recording| f2673\n  f2673 -->|later in recording| f2725\n  f2725 -->|later in recording| f2776\n  f2776 -->|later in recording| f2836\n  f2836 -->|later in recording| f2956\n  f2956 -->|later in recording| f3135\n  f3135 -->|later in recording| f3244\n  f3244 -->|later in recording| f3304\n  f3304 -->|later in recording| f3353\n  f3353 -->|later in recording| f3533\n  f3533 -->|later in recording| f3710\n  f3710 -->|later in recording| f3768\n  f3768 -->|later in recording| f4063\n  f4063 -->|later in recording| f4243\n  f4243 -->|later in recording| f4295\n  f4295 -->|later in recording| f4415\n  f4415 -->|later in recording| f4466\n  f4466 -->|later in recording| f4586\n  f4586 -->|later in recording| f4706\n  f4706 -->|later in recording| f4826\n  f4826 -->|later in recording| f4940\n  f4940 -->|later in recording| f5057\n  f5057 -->|later in recording| f5171\n  f5171 -->|later in recording| f5406\n  f5406 -->|later in recording| f6293\n  f6293 -->|later in recording| f6403\n  f6403 -->|later in recording| f6580\n  f6580 -->|later in recording| f6646\n  f6646 -->|later in recording| f6696\n  f6696 -->|later in recording| f6793\n  f6793 -->|later in recording| f6853\n  f6853 -->|later in recording| f7090\n  f7090 -->|later in recording| f7208\n  f7208 -->|later in recording| f7322\n  f7322 -->|later in recording| f10156\n  f10156 -->|later in recording| f10275\n  f10275 -->|later in recording| f10385\n  f10385 -->|later in recording| f10445\n  f10445 -->|later in recording| f10618\n  f10618 -->|later in recording| f10678\n  f10678 -->|later in recording| f10736\n  f10736 -->|later in recording| f10789\n  f10789 -->|later in recording| f10849\n  f10849 -->|later in recording| f10908\n  f10908 -->|later in recording| f10964\n  f10964 -->|later in recording| f11024\n  f11024 -->|later in recording| f11081\n  f11081 -->|later in recording| f11194\n  f11194 -->|later in recording| f11254\n  f11254 -->|later in recording| f11314\n  f11314 -->|later in recording| f11374\n  f11374 -->|later in recording| f11432\n  f11432 -->|later in recording| f11492\n  f11492 -->|later in recording| f14001\n  f14001 -->|later in recording| f14121\n  f14121 -->|later in recording| f14481\n  f14481 -->|later in recording| f14658\n  f14658 -->|later in recording| f16097\n  f16097 -->|later in recording| f16216\n  f16216 -->|later in recording| f17044\n  f17044 -->|later in recording| f17271\n  f17271 -->|later in recording| f17331\n  f17331 -->|later in recording| f17391\n  f17391 -->|later in recording| f17451\n  f17451 -->|later in recording| f17508\n  f17508 -->|later in recording| f17568\n  f17568 -->|later in recording| f17683\n  f17683 -->|later in recording| f17857\n  f17857 -->|later in recording| f18091\n  f18091 -->|later in recording| f18264",
+  "snapshot": "Read-only chronological export, not verified action edges"
+}

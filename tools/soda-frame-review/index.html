@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Soda Frame Review</title>
+  <link rel="stylesheet" href="/style.css">
+  <script defer src="/app.js"></script>
+  <script defer src="/enhancements.js"></script>
+  <script defer src="/workspace.js"></script>
+  <script defer src="/learning.js"></script>
+</head>
+<body>
+  <header><div><h1>Soda Frame Review</h1><p>Choose from the source, not the detector.</p></div>
+    <div class="save-area"><span id="save-status" role="status" aria-live="polite">Loading saved decisions...</span>
+      <button id="reload">Reload decisions</button><button id="export">Export JSON</button></div>
+  </header>
+  <div id="error" role="alert" hidden></div>
+  <nav class="workspace-tools" aria-label="Workspace tabs">
+    <button id="tab-review" aria-pressed="true">Frame review</button>
+    <button id="tab-library" aria-pressed="false">Diagrams and collections</button>
+    <button id="tab-qa" aria-pressed="false">QA - Jira tickets</button>
+    <button id="tab-learning" aria-pressed="false">LLM learning</button>
+  </nav>
+  <section id="library-tab" class="tool-panel" hidden>
+    <h2>Diagrams and collections</h2>
+    <p>Saved reports are snapshots. Approved collections are rebuilt from current saved decisions.</p>
+    <button id="library-refresh">Refresh library</button>
+    <div id="library-items" class="library-grid"></div>
+    <iframe id="library-preview" title="Saved diagram preview" sandbox hidden></iframe>
+    <div id="library-collection" class="attachment-grid"></div>
+    <h2>Request context</h2>
+    <p>This saves a local request and copies an evidence-grounded prompt for your Copilot conversation. It does not silently call an AI model.</p>
+    <label>Selected diagram or collection<input id="context-artifact" readonly></label>
+    <label>What would you like explained?<textarea id="context-question" rows="3" maxlength="4000"></textarea></label>
+    <button id="context-save">Save context request and prepare prompt</button>
+    <textarea id="context-prompt" rows="7" readonly aria-label="Context prompt"></textarea>
+    <button id="context-copy">Copy prompt for Copilot</button>
+  </section>
+  <section id="qa-tab" class="tool-panel" hidden>
+    <h2>QA - Jira tickets</h2>
+    <p>Prepare locally, review evidence and then explicitly confirm transmission. Frames may contain personal information: redact before uploading when needed.</p>
+    <details><summary>Connect Jira Cloud</summary>
+      <p>Paste your site or board URL. Issues belong to a project, not directly to a board; board filters determine where they appear. Jira Cloud (*.atlassian.net) is supported; Data Center is not configured.</p>
+      <label>Jira site or board URL<input id="jira-site" type="url" placeholder="https://your-team.atlassian.net/..."></label>
+      <label>Jira account email<input id="jira-email" type="email" autocomplete="off"></label>
+      <label>API token<input id="jira-token" type="password" autocomplete="off"></label>
+      <p>Credentials stay only in this server's memory until disconnect/restart. Never paste them into the chat or description.</p>
+      <button id="jira-connect">Connect and load projects</button><button id="jira-disconnect">Disconnect</button>
+    </details>
+    <p id="jira-status" role="status">Not connected. Local drafts remain available.</p>
+    <div class="source-controls">
+      <label>Project<select id="jira-project"><option value="">Connect Jira first</option></select></label>
+      <label>Issue type<select id="jira-type"><option value="">Select a project</option></select></label>
+    </div>
+    <label>Summary<input id="qa-summary" maxlength="250"></label>
+    <label>Description<textarea id="qa-description" rows="10" maxlength="20000" placeholder="Observed behavior, expected behavior, reproduction steps and unknowns"></textarea></label>
+    <button id="qa-help">Prepare description from evidence</button>
+    <button id="qa-new">New draft</button>
+    <div id="qa-drop" tabindex="0" role="group" aria-label="Drop evidence images here">
+      <p>Drop images or drag frames from the gallery here. You can also attach files or add the current frame.</p>
+      <label>Attach images<input id="qa-files" type="file" accept="image/jpeg,image/png,image/webp" multiple></label>
+      <button id="qa-current">Add current frame</button>
+    </div>
+    <p>Up to 20 images, 8 MB each and 24 MB total. Removing evidence here does not alter source frames or selections.</p>
+    <div id="qa-attachments" class="attachment-grid"></div>
+    <button id="qa-save">Save local draft</button>
+    <button id="qa-export">Download draft / ask Copilot</button>
+    <button id="qa-create">Review and create Jira ticket</button>
+    <p id="qa-status" role="status" aria-live="polite"></p>
+    <dialog id="qa-confirm">
+      <h2>Confirm Jira submission</h2><p id="qa-confirm-text"></p>
+      <p>This sends the description and all attached images to the named Jira site. Inspect personal information first.</p>
+      <button id="qa-confirm-send">Send this ticket and its images</button>
+      <button id="qa-confirm-cancel">Cancel</button>
+    </dialog>
+    <h2>Saved drafts and receipts</h2><div id="qa-drafts"></div>
+  </section>
+  <section id="learning-tab" class="tool-panel" hidden>
+    <h2>LLM learning - recording closeout</h2>
+    <p>Clean up similar frames and non-selections, archive the retained collection, save diagrams and record selection feedback.
+      Originals are never deleted. This routine does not train a model or call an LLM.</p>
+    <div class="workspace-tools">
+      <label>Recording <select id="learning-video"></select></label>
+      <button id="learning-refresh">Refresh selection summary</button>
+    </div>
+    <p id="learning-summary" role="status">Choose a recording.</p>
+    <h3>Review similar selected frames</h3>
+    <p>Scan for pixel-similar candidates, compare text, buttons and counters, then tick the frame to discard.
+      Nothing is removed until you confirm the recording closeout. No candidate is automatically selected for removal.</p>
+    <button id="learning-scan">Find similar frames</button>
+    <button id="learning-clear-discards">Keep all / clear proposed discards</button>
+    <p id="learning-similarity-status" role="status">No similarity scan yet.</p>
+    <p id="learning-discard-summary" role="status">0 selected frames marked for discard.</p>
+    <div id="learning-pairs"></div>
+    <fieldset>
+      <legend>Closeout options</legend>
+      <p>Export a hash-verified full-resolution collection after your reviewed similar-frame discards.
+        This closes the whole source recording, not only the current gallery or review-end window.</p>
+      <label><input id="learning-hide" type="checkbox" checked> Hide all non-selected frames in recoverable dashboard trash</label><br>
+      <label><input id="learning-diagram" type="checkbox" checked> Save HTML, JSON and Mermaid diagrams</label><br>
+      <label><input id="learning-compare" type="checkbox" checked> Compare existing suggestions against my selections</label>
+    </fieldset>
+    <label>What mattered in your selection? (optional)
+      <textarea id="learning-notes" maxlength="12000" rows="5" placeholder="Useful differences, transitions, text, controls or counters to retain next time"></textarea>
+    </label>
+    <button id="learning-run">Review and finalize this recording</button>
+    <p id="learning-status" role="status">No learning run started.</p>
+    <div id="learning-result"></div>
+    <h3>Ask Copilot to study the selection</h3>
+    <p>Automatic analysis is descriptive, not visual reasoning. Copy this evidence-linked request to the chat
+      for semantic review and reusable selection guidance. No hidden model training occurs.</p>
+    <textarea id="learning-prompt" rows="6" readonly aria-label="Copilot selection review request"></textarea>
+    <button id="learning-copy">Copy review request</button>
+    <h3>Saved closeouts</h3><div id="learning-history" class="workspace-tools"></div>
+    <dialog id="learning-confirm">
+      <h3>Confirm recording closeout</h3><p id="learning-confirm-summary"></p>
+      <p>This does not permanently delete original images. Reviewed discards go to recoverable Trash;
+        label histories and other recordings stay unchanged.</p>
+      <div class="workspace-tools"><button id="learning-confirm-run">Confirm closeout</button>
+        <button id="learning-cancel">Cancel</button></div>
+    </dialog>
+  </section>
+  <main id="review-tab">
+  <nav class="workspace-tools" aria-label="Review tools">
+    <button id="show-diagram">Create diagram from approved frames</button>
+    <button id="show-diagnostics">Code and error log</button>
+    <span id="connection-status" role="status">Connecting...</span>
+  </nav>
+  <section id="diagram-panel" class="tool-panel" hidden aria-label="Approved frame diagram">
+    <h2>Approved-frame diagram</h2>
+    <p>Arrows mean later in the recording, not a proven action or decision. Includes all approved frames in the selected recording, not just the review window.</p>
+    <p id="diagram-status" role="status"></p>
+    <div class="workspace-tools">
+      <button id="diagram-next">Reveal next step</button>
+      <button id="diagram-all">Show all steps</button>
+      <button id="diagram-refresh">Rebuild from saved approvals</button>
+      <button id="diagram-export">Download diagram JSON</button>
+      <button id="diagram-mermaid">Download Mermaid</button>
+      <button id="diagram-close">Close diagram</button>
+    </div>
+    <ol id="diagram-nodes"></ol>
+  </section>
+  <section id="diagnostics-panel" class="tool-panel" hidden aria-label="Code and error log">
+    <h2>Code and local error log</h2>
+    <p id="code-path"></p><p id="log-path"></p>
+    <p>Source: server.py (API/storage), app.js (selection), enhancements.js (diagram/diagnostics), index.html and style.css. Logs rotate at 1 MB with three backups. No external telemetry.</p>
+    <button id="diagnostics-refresh">Refresh log</button>
+    <button id="diagnostics-close">Close log</button>
+    <pre id="log-entries"></pre>
+  </section>
+  <section class="filmstrip" aria-label="Source frame gallery">
+    <div class="source-controls">
+      <label>Recording<select id="recording"></select></label>
+      <label>Review end (seconds)<input id="end" type="number" min="0" step="0.001" value="86"></label>
+      <button id="apply-end">Apply</button>
+    </div>
+    <p id="source-info">Loading source timeline...</p>
+    <p id="split-warning" hidden>Reserved evaluation recording. Do not use these labels to tune the detector.</p>
+    <div class="gallery-header"><div><h2>Select your frames</h2>
+      <p>Tick a frame to keep it. Untick to clear the selection, not reject it. Each change saves automatically.</p>
+      <p id="selection-total" role="status"></p><p id="gallery-info"></p></div>
+      <label>Gallery view<select id="spacing"><option value="second">1-second overview</option><option value="all">Every source frame</option><option value="suggested">Analyst preselection</option><option value="uncertain">Uncertain candidates</option><option value="approved">Approved only</option></select></label>
+      <button id="page-back">Earlier</button><button id="page-next">Later</button>
+      <button id="sort-frames">Sort frames</button>
+      <button id="trash-view" aria-pressed="false">Trash (0)</button>
+      <label>Page<input id="page-number" type="number" min="1" value="1"></label>
+      <button id="page-go">Go to page</button>
+    </div>
+    <div id="gallery"></div>
+  </section>
+  <div class="workspace">
+    <section class="viewer" aria-label="Frame viewer">
+      <div class="stage">
+        <img id="frame-image" alt="Loading source frame" hidden>
+        <video id="video" preload="metadata" hidden playsinline></video>
+        <span id="image-status" role="status">Loading image...</span>
+      </div>
+      <div class="position"><strong id="position">Frame</strong><span id="current-label">Unlabeled</span>
+        <button id="trash-current">Move to Trash</button>
+        <a id="original" target="_blank" rel="noopener">Full resolution</a></div>
+      <input id="timeline" type="range" min="0" max="1" value="0" aria-label="Source frame timeline">
+      <div class="transport">
+        <button id="back-two-half">-2.5s</button><button id="back-two">-2s</button>
+        <button id="back-second">-1s</button><button id="previous">Previous frame</button>
+        <button id="play">Play</button><button id="next">Next frame</button><button id="next-second">+1s</button>
+        <button id="next-two">+2s</button><button id="next-two-half">+2.5s</button>
+        <label>Speed<select id="speed"><option value=".25">0.25x</option><option value=".5" selected>0.5x</option><option value="1">1x</option></select></label>
+      </div>
+      <p class="hint">Arrow keys: one frame. Space: play/pause. K: keep. A: animation. R: repeat. U: unsure.</p>
+    </section>
+    <aside>
+      <section class="decision-panel">
+        <h2>Your decision</h2>
+        <p>Pause on an exact frame. Every click below saves to the project.</p>
+        <label>Note (optional)<textarea id="note" rows="2" maxlength="2000" placeholder="What makes this a new state?"></textarea></label>
+        <div class="decisions">
+          <button class="primary" data-label="new_state">Keep frame <kbd>K</kbd></button>
+          <button data-label="animation">Animation <kbd>A</kbd></button>
+          <button data-label="same_state">Same state <kbd>R</kbd></button>
+          <button data-label="uncertain">Unsure <kbd>U</kbd></button>
+        </div>
+        <p id="saved-path" class="hint"></p>
+        <details><summary>Mark an interval</summary>
+          <p>Set the first and last frames, then label the interval. Individual frame decisions take priority. Source images are never deleted.</p>
+          <button id="range-start">Set start here</button><button id="range-end">Set end here</button>
+          <p id="range-info">No interval selected.</p>
+          <button id="range-animation">Interval: animation</button>
+          <button id="range-repeat">Interval: same state</button>
+          <button id="range-unsure">Interval: unsure</button>
+        </details>
+      </section>
+      <section class="saved-panel"><div class="list-title"><h2>Saved decisions</h2><span id="counts">0</span></div>
+        <p class="hint">Click a thumbnail to revisit and change its label. Unlabeled frames are not rejected.</p>
+        <div id="saved-list"><p>No decisions yet.</p></div>
+      </section>
+    </aside>
+  </div>
+  </main>
+</body>
+</html>
