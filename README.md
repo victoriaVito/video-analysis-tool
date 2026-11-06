@@ -18,6 +18,9 @@ python3 tools/soda-frame-review/server.py --port 8767
 Open `http://127.0.0.1:8767/`. Port 8767 avoids the original reviewer's usual
 port 8766. No service is started automatically.
 
+For a visual walkthrough, see the
+[illustrated tutorial PDF](docs/video-analysis-tool-tutorial.pdf).
+
 Set `SODA_FRAME_ARCHIVE` to the directory containing the source-frame archive
 before starting the reviewer:
 
