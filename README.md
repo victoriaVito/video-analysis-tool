@@ -59,26 +59,36 @@ local datasets with symlinks to another project.
 drafts, models, snapshots and generated provenance. A fresh checkout of this
 repository does not include them.
 
-The extractor requires an explicit `--source` and `--archive` to avoid writing
-to the shared archive by default. It appends to an **existing** archive with a
-`manifest.json` and refuses recordings already registered:
+Before extraction, the tool asks for the source video path, an existing local
+destination parent folder, and a recording name. It creates a timestamped
+folder there, copies the original video without changing it, and saves all
+extracted frames and timestamps beside that copy. Both source and destination
+must be outside this repository; no analyzed video or frame content is stored
+in Git. The extractor does not alter the historical archive:
 
 ```sh
-python3 scripts/extract_new_recording.py \
-  --source "/absolute/path/to/owned-recording.mp4" \
-  --archive "/absolute/path/to/separate-frame-archive"
+python3 scripts/extract_new_recording.py
 ```
 
-This is the existing extraction workflow, not a new import UI. Registering a
-new recording in the review dataset remains a separate step. No downloader or
-YouTube-thumbnail script is included: those are not local-video screenshots.
-Extraction preserves the source and exports every decoded frame, not an
-automatically approved selection.
+For non-interactive use, pass `--source`, `--destination` and `--name`; the
+legacy `--archive` option is an alias for the destination parent, not an
+existing archive to append to. To review a newly created local archive, pass
+its timestamped folder to the dashboard:
+
+```sh
+python3 tools/soda-frame-review/server.py --port 8767 \
+  --archive "/absolute/local/path/20261109T120000_my-recording"
+```
+
+Registration in the human-review dataset remains a separate step. Extraction
+preserves the source and exports every decoded frame, not an automatically
+approved selection. No downloader or YouTube-thumbnail script is included.
 
 ## Checks
 
 ```sh
 python3 -m unittest discover -s tools/soda-frame-review -p 'test_*.py'
+python3 -m unittest discover -s scripts -p 'test_*.py'
 node tools/soda-frame-review/test_selection.cjs
 node tools/soda-frame-review/test_learning.cjs
 ```

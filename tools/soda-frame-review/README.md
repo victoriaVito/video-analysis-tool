@@ -5,15 +5,18 @@ is the editable dashboard source; it is not a generated canvas or a Git checkout
 
 ## Run
 
-From `eoc_competitive_intelligence`, using the existing Pillow-capable Python:
+From the tool repository, using the existing Pillow-capable Python:
 
 ```sh
-python3 tools/soda-frame-review/server.py --port 8766
+/opt/local/bin/python3 tools/soda-frame-review/server.py --port 8767
 ```
 
-Open `http://127.0.0.1:8766/?video=1` for recording 2 (zero-based URL index).
-The external source drive must be mounted. Only recording 1 currently has a
-continuous video preview; other recordings have exact-frame galleries.
+Open `http://127.0.0.1:8767/`. To review a separately extracted local archive,
+add `--archive "/path/to/timestamped-recording-folder"`. The archive folder
+contains a local copy of the source video, a `frames/` directory, timestamps
+and a manifest. Its destination must be outside the repository. Review labels
+remain in the local calibration dataset and are not included in the media
+archive.
 
 ## Source and data
 

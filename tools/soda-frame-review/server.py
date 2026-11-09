@@ -494,11 +494,15 @@ def create_server(store, port, log_path=None):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--port", type=int, default=8766)
+    parser.add_argument(
+        "--archive", type=Path, default=ARCHIVE,
+        help="Local frame archive containing manifest.json (defaults to the configured archive)",
+    )
     args = parser.parse_args()
     logging.basicConfig(level=logging.INFO)
     configure_logging()
     try:
-        server = create_server(Store(), args.port, LOG_PATH)
+        server = create_server(Store(archive=args.archive), args.port, LOG_PATH)
     except (OSError, ValueError):
         LOG.exception("Dashboard startup failed; check source drive, dataset and port")
         raise
