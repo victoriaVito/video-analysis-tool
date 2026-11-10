@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Soda Frame Review - Version 2 tutorial</title>
+<style>
+@page { size: A4; margin: 18mm; }
+* { box-sizing: border-box; }
+body { margin: 0; color: #263345; background: #e9edf3; font: 14px/1.6 Arial, sans-serif; }
+main { max-width: 800px; margin: auto; }
+section { background: white; padding: 40px; margin: 24px 0; }
+.eyebrow { color: #b44900; font-weight: bold; letter-spacing: 2px; font-size: 11px; }
+h1 { font-size: 40px; line-height: 1.15; margin: 16px 0; color: #17283e; }
+h2 { font-size: 28px; line-height: 1.2; color: #17283e; }
+h3 { font-size: 17px; color: #b44900; margin-bottom: 6px; }
+p { margin: 10px 0; }
+.lead { font-size: 18px; }
+.callout { padding: 16px; border-left: 4px solid #ff6a00; background: #fff3e7; margin: 18px 0; }
+.safe { background: #eaf8f3; border-color: #087c5a; }
+.steps { display: flex; gap: 8px; margin: 24px 0; }
+.step { flex: 1; background: #edf2f8; padding: 14px 10px; text-align: center; border-radius: 6px; }
+.step b { display: block; color: #b44900; }
+.yellow { background: #fff3be; }
+.green { background: #def4e5; }
+table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+td, th { text-align: left; padding: 10px; border-bottom: 1px solid #d5deea; vertical-align: top; }
+th { background: #17283e; color: white; }
+code { font: 12px/1.6 monospace; overflow-wrap: anywhere; }
+pre { background: #edf2f8; padding: 14px; white-space: pre-wrap; }
+li { margin: 8px 0; }
+footer { color: #657187; border-top: 1px solid #d5deea; padding-top: 12px; margin-top: 26px; font-size: 11px; }
+a { color: #086c56; }
+@media print {
+ body { background: white; font-size: 12px; }
+ main { max-width: none; }
+ section { padding: 0; margin: 0; break-after: page; }
+ section:last-child { break-after: auto; }
+ h1 { font-size: 36px; }
+ h2 { font-size: 25px; }
+ .lead { font-size: 16px; }
+ .callout, table, pre, .steps { break-inside: avoid; }
+}
+</style>
+</head>
+<body><main>
+<section>
+<div class="eyebrow">VERSION 2 / LOCAL REVIEW WORKFLOW</div>
+<h1>Soda Frame Review</h1>
+<p class="lead">Choose exact visual evidence. Organize sequences without losing their members. Keep your media private.</p>
+<div class="steps">
+<div class="step"><b>01</b>Load a recording</div>
+<div class="step"><b>02</b>Inspect exact frames</div>
+<div class="step"><b>03</b>Group and categorize</div>
+<div class="step"><b>04</b>Review and export</div>
+</div>
+<h3>What changed in version 2</h3>
+<p>A separate Frame editor, exact-frame groups with yellow staging, numbered/color-coded merge destinations, member Move/Remove controls, Saga map categories, and recoverable cleanup directly from the gallery and groups.</p>
+<p>Similarity scanning now supports up to 1,000 individual retained Keep frames. Keep all / clear proposed discards reports what it cleared; it is not a bulk Keep action.</p>
+<h3>Start the dashboard</h3>
+<pre><code>/opt/local/bin/python3 tools/soda-frame-review/server.py \
+  --port 8767 --archive "/path/to/timestamped-recording"
+</code></pre>
+<p>Open <a href="http://127.0.0.1:8767/">http://127.0.0.1:8767/</a>. Use an existing Python environment with Pillow and NumPy; the illustrated commands use the project's configured environment.</p>
+<div class="callout safe"><b>Private by default.</b> Do not commit videos, source images, labels, drafts or exported screenshot collections. This guide contains no real recording screenshots. Source media is never deleted by recoverable Trash.</div>
+<footer>Soda Frame Review / Version 2 / 1 of 6</footer>
+</section>
+<section>
+<div class="eyebrow">01 / LOAD AND FIND A MOMENT</div>
+<h2>Start with the complete source</h2>
+<h3>Extract a new local recording</h3>
+<pre><code>python3 scripts/extract_new_recording.py</code></pre>
+<p>Enter the source video path, an existing destination parent folder and a recording name. The extractor creates a dated folder, copies the video and saves every extracted frame, timestamps and a manifest beside it. Keep both paths outside the repository.</p>
+<p>Start the dashboard with <code>--archive</code> pointing to that dated folder. Media extraction and human approval are separate steps.</p>
+<h3>Use the first tab as your gallery</h3>
+<ol>
+<li>Choose the recording and review window in <b>Frame review</b>.</li>
+<li>Scan the overview, then choose <b>Every source frame</b> to inspect changes between overview samples.</li>
+<li>Use filters and pagination to find candidates. A suggestion is not an approval.</li>
+<li>Click a thumbnail to open that exact source frame in <b>Frame editor</b>.</li>
+</ol>
+<div class="steps">
+<div class="step"><b>Frame review</b>Gallery / filters / staging / cleanup</div>
+<div class="step"><b>Frame editor</b>Large image / navigation / decisions</div>
+</div>
+<div class="callout"><b>Same recording, two views.</b> Back to gallery preserves its page, filter and window. Editor navigation can inspect the whole recording without changing that gallery window. Changing recording changes the shared context.</div>
+<footer>Soda Frame Review / Version 2 / 2 of 6</footer>
+</section>
+<section>
+<div class="eyebrow">02 / INSPECT AND DECIDE</div>
+<h2>Inspect the exact state</h2>
+<p>In <b>Frame editor</b>, compare text, control availability, counters, rewards and intermediate animation states. Inspect small regions before treating similar images as duplicates.</p>
+<table>
+<tr><th>Control</th><th>Purpose</th></tr>
+<tr><td>Previous / Next frame</td><td>Inspect neighboring source timestamps.</td></tr>
+<tr><td>Time jumps / timeline</td><td>Move to a nearby real source frame. Navigation does not save decisions.</td></tr>
+<tr><td>K / A / R / U</td><td>Keep / Animation / Same state / Unsure. Decisions save to the local dataset.</td></tr>
+<tr><td>Arrow keys / Space</td><td>Single-frame movement / playback where a source preview is available.</td></tr>
+<tr><td>1 / M</td><td>Stage an exact frame / save the staged group. See the next page.</td></tr>
+</table>
+<p>Shortcuts ignore text fields, held-key repeats and busy saves. Frame staging requires the source image to finish loading and playback to be paused. Decision/transport shortcuts work in the editor, not unrelated tabs.</p>
+<h3>Recover from a stale or uncertain save</h3>
+<p>If another window writes, reload decisions before trying again. A lost response may mean a write succeeded: inspect the saved state instead of repeatedly clicking Save. The tool does not automatically retry mutations.</p>
+<div class="callout safe"><b>No general Undo/Redo.</b> Clear yellow staging cancels an unsaved draft. Move a member back to reverse a transfer; Ungroup removes group metadata without deleting frames. Restore from Trash reverses dashboard hiding. Do not restore an old whole-dataset checkpoint to undo one recent action.</div>
+<footer>Soda Frame Review / Version 2 / 3 of 6</footer>
+</section>
+<section>
+<div class="eyebrow">03 / ORGANIZE EXACT FRAMES</div>
+<h2>Group sequences, not guesses</h2>
+<div class="steps">
+<div class="step yellow"><b>1</b>Stage exact frame in yellow</div>
+<div class="step yellow"><b>Repeat</b>Choose at least two members</div>
+<div class="step green"><b>M</b>Save one green unit</div>
+</div>
+<p>Staging is separate from Keep. Only the exact marked members join the group: no neighboring or intervening frames are inferred. Use Expand members to inspect them.</p>
+<h3>Merge, number and color</h3>
+<p>Choose <b>New group (yellow staging)</b> beside a gallery frame to stage that exact card. Choose an existing <b>Group N</b> and Merge to append it. Merge does not remove another membership; use Move for a transfer.</p>
+<p>In <b>Groups</b>, choose a unique positive group number and a color, then press <b>Save group settings</b>. Editing fields alone does not save. Stable internal identities survive renumbering.</p>
+<h3>Correct membership</h3>
+<p>For each member, choose a destination and <b>Move</b>, or use <b>Remove from group</b>. If fewer than two members would remain, confirm dissolving the source group; remaining frames become individual. Keep/Trash and direct frame categories are preserved.</p>
+<h3>Saga map is a category, not a group</h3>
+<p>Check or uncheck <b>Saga map</b>, then press <b>Save category</b> on the exact frame or group. A category on a group does not tag its members or approve them. Custom labels such as Pop-up are not included in version 2.</p>
+<div class="callout"><b>Different meanings:</b> Group = these exact frames form one unit. Category = a label on that reference. Keep = a saved individual decision. Yellow = an unsaved staging draft.</div>
+<footer>Soda Frame Review / Version 2 / 4 of 6</footer>
+</section>
+<section>
+<div class="eyebrow">04 / CLEAN UP WITHOUT DELETING MEDIA</div>
+<h2>Use recoverable Trash</h2>
+<h3>Discard one frame directly inside a group</h3>
+<p>Use <b>Move to Trash</b> on a member in Groups or an expanded gallery unit. It hides the exact frame without removing membership or changing categories. Groups still shows the reference and offers <b>Restore from Trash</b>. Normal gallery expansions omit trashed members.</p>
+<h3>Hide non-selections across the recording</h3>
+<ol>
+<li>Save or clear yellow staging and finish manual drafts.</li>
+<li>In Frame review, press <b>Move unselected frames to Trash</b>.</li>
+<li>Review the recording name, total source frames, selected count, existing Trash and exact eligible count.</li>
+<li>Confirm only when the whole-recording scope is intended. Cancel or Escape writes nothing.</li>
+</ol>
+<table>
+<tr><th>Protected from new cleanup</th><th>Not an approval by itself</th></tr>
+<tr><td>Non-trashed individual Keep points and selected-unit members, deduplicated.</td><td>Metadata-only groups, intervals, categories and unsaved staging.</td></tr>
+</table>
+<p>Existing Trash stays in Trash. Cleanup preserves cases, histories, groups and original media. It does not generate diagrams, export a collection, fit a model or contact Jira.</p>
+<div class="callout safe"><b>Restore, don't re-extract.</b> Use the Trash view for individual restoration. Historical retained-only archives cannot restore previously physically removed files and remain read-only for visibility changes.</div>
+<footer>Soda Frame Review / Version 2 / 5 of 6</footer>
+</section>
+<section>
+<div class="eyebrow">05 / REVIEW SIMILARITY AND EXPORT</div>
+<h2>Keep evidence, not just endpoints</h2>
+<h3>Find similar frames</h3>
+<p>In <b>LLM learning</b>, choose the recording and refresh its selection summary. Find similar frames compares all unordered pairs across up to 1,000 individual retained Keep frames and displays up to 40 closest candidates. It never silently truncates to the first 300.</p>
+<p>Inspect full-resolution text, controls and counters. Tick Discard only for exact frames you explicitly reviewed. <b>Keep all / clear proposed discards</b> clears the current scan's local discard choices; it does not select unreviewed source frames or save new Keep labels. A no-op message means nothing was marked.</p>
+<h3>Save a selection package</h3>
+<p>Review closeout options and exact counts before confirming. Similar-frame discards require recoverable cleanup. Retained originals are copied and hash-verified; optional diagrams and descriptive comparisons are separate options. A closeout is not model training.</p>
+<h3>Use chronological diagrams carefully</h3>
+<p>Saved collections and HTML/JSON/Mermaid diagrams appear in <b>Diagrams and collections</b>. An arrow means only "later in this recording": not a tap, purchase, branch or causal link. Saved packages retain their export revision rather than silently following current decisions.</p>
+<p>For a local Figma import, use self-contained SVG diagrams with embedded previews and exact frame/time labels. Importing that file into a cloud document may upload its images; review destination and sharing first. A local export is not proof of a successful Figma import.</p>
+<div class="callout"><b>Learning boundary.</b> Keep selected intermediate states. Separate observations, interpretations and unknowns. Omitted frames are not negative labels. No automatic LLM call or weight update occurs.</div>
+<footer>Soda Frame Review / Version 2 / 6 of 6 / Updated 2026-11-10</footer>
+</section>
+</main></body></html>

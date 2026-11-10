@@ -34,6 +34,10 @@ workflows; dependencies are not installed automatically.
 
 ## Included
 
+Version 2 usage is documented in the [six-page tutorial](docs/video-analysis-tool-tutorial.pdf)
+([printable HTML](docs/video-analysis-tool-tutorial.html)) and
+[release notes](docs/version-2-release-notes.md).
+
 - The complete `tools/soda-frame-review/` app and its regression checks:
   galleries, frame navigation, annotations, recoverable Trash, diagrams,
   collections, local QA drafts, optional Jira connector and selector learning.

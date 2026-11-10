@@ -18,6 +18,8 @@
   <div id="error" role="alert" hidden></div>
   <nav class="workspace-tools" aria-label="Workspace tabs">
     <button id="tab-review" aria-pressed="true">Frame review</button>
+    <button id="tab-editor" aria-pressed="false" aria-controls="editor-tab">Frame editor</button>
+    <button id="tab-groups" aria-pressed="false" aria-controls="groups-tab">Groups</button>
     <button id="tab-library" aria-pressed="false">Diagrams and collections</button>
     <button id="tab-qa" aria-pressed="false">QA - Jira tickets</button>
     <button id="tab-learning" aria-pressed="false">LLM learning</button>
@@ -89,7 +91,8 @@
     <p>Scan for pixel-similar candidates, compare text, buttons and counters, then tick the frame to discard.
       Nothing is removed until you confirm the recording closeout. No candidate is automatically selected for removal.</p>
     <button id="learning-scan">Find similar frames</button>
-    <button id="learning-clear-discards">Keep all / clear proposed discards</button>
+    <button id="learning-clear-discards">Keep all current selections — clear discard proposals</button>
+    <p>This clears only the local proposed discards across all pairs in this scan. It does not select unreviewed frames or save Keep decisions. Only a confirmed closeout applies reviewed discards.</p>
     <p id="learning-similarity-status" role="status">No similarity scan yet.</p>
     <p id="learning-discard-summary" role="status">0 selected frames marked for discard.</p>
     <div id="learning-pairs"></div>
@@ -120,6 +123,24 @@
       <div class="workspace-tools"><button id="learning-confirm-run">Confirm closeout</button>
         <button id="learning-cancel">Cancel</button></div>
     </dialog>
+  </section>
+  <section id="groups-tab" class="tool-panel" hidden aria-labelledby="groups-title">
+    <h2 id="groups-title">Groups</h2>
+    <p>To add a group, open Frame editor and stage at least two exact frames with <kbd>1</kbd>, then press <kbd>M</kbd>.
+      You can also choose <strong>New group (yellow staging)</strong> beside a frame and stage more exact frames.
+      Existing groups keep their identity and membership when configured here.</p>
+    <p>Set a unique positive group number and color, then choose <strong>Save group settings</strong>.
+      Editing either field alone never writes. In a group, choose an existing destination and press
+      <strong>Move</strong>, or press <strong>Remove from group</strong> to correct one exact membership.
+      Groups without a saved color use the neutral default until you save settings.</p>
+    <p>Move an exact member to recoverable Trash, or restore it here, without removing its group membership,
+      category or saved decision. This does not delete original files. Move/Remove membership is separate.</p>
+    <p><strong>Saga map</strong> is an independent category. Check or uncheck it and press
+      <strong>Save category</strong> for each exact frame or group. Changing the checkbox alone
+      never saves. A group category labels only its reference, not its members or Keep decisions.
+      Moving or removing a member preserves its direct frame category.</p>
+    <label>Recording<select id="groups-recording" aria-label="Recording whose groups are shown"></select></label>
+    <div id="group-list"></div>
   </section>
   <main id="review-tab">
   <nav class="workspace-tools" aria-label="Review tools">
@@ -157,6 +178,14 @@
     </div>
     <p id="source-info">Loading source timeline...</p>
     <p id="split-warning" hidden>Reserved evaluation recording. Do not use these labels to tune the detector.</p>
+    <section class="cleanup-panel" aria-labelledby="cleanup-title">
+      <h2 id="cleanup-title">Clean up this recording</h2>
+      <p>Move unselected frames to recoverable dashboard Trash across the whole recording, not just this page or review window.
+        Protects non-trashed individual Keep points and selected group members. Yellow staging and categories alone are not approval.</p>
+      <p id="cleanup-summary" role="status"></p>
+      <button id="cleanup-preview" class="primary">Move unselected frames to Trash</button>
+      <p>No original files deleted. No export, learning or closeout. Preview and confirm exact counts first.</p>
+    </section>
     <div class="gallery-header"><div><h2>Select your frames</h2>
       <p>Tick a frame to keep it. Untick to clear the selection, not reject it. Each change saves automatically.</p>
       <p id="selection-total" role="status"></p><p id="gallery-info"></p></div>
@@ -167,8 +196,49 @@
       <label>Page<input id="page-number" type="number" min="1" value="1"></label>
       <button id="page-go">Go to page</button>
     </div>
+    <section id="frame-groups" aria-labelledby="group-title">
+      <h2 id="group-title">Manual frame groups</h2>
+      <p id="stage-help">In Frame editor, press <kbd>1</kbd> on an open exact frame to toggle yellow staging, independent of Keep.
+        Navigate and stage at least two frames, then press <kbd>M</kbd> to save only those frames as one
+        green selected Same scene card. Expand it to inspect members; ungroup to restore individual view.
+        Use a frame's Merge destination to stage it for a new group or append it to an existing numbered group.
+        No animation or intervening frames are inferred. Shortcuts pause while editing, playing, saving,
+        viewing Trash, using tabs other than Frame review/Frame editor or reviewing a manual draft. Existing selected-unit members
+        must be ungrouped before staging again. Reloading decisions or changing recording clears yellow marks.
+        Configure saved group numbers and colors in the Groups tab.</p>
+      <div class="stage-actions" aria-describedby="stage-help">
+        <button id="stage-save" aria-keyshortcuts="M" disabled>Group yellow frames (M)</button>
+        <button id="stage-clear" disabled>Clear yellow staging</button>
+        <span id="stage-count" role="status" aria-live="polite">0 yellow staged frames (not Keep decisions)</span>
+      </div>
+      <p>Describe an Animation or Same scene using exact frames. Groups never change individual decisions, Trash or diagrams.</p>
+      <button id="group-start">Group kept frames — review members</button>
+      <div id="group-draft" hidden>
+        <p>Starting set: kept frames in this recording, including outside the review window.
+          Deselect unrelated frames below, or use Add to group draft on any gallery card.
+          Nothing is saved until you review the exact members and click Save group.</p>
+        <div class="group-fields">
+          <label>Group type<select id="group-type"><option value="same_scene">Same scene</option><option value="animation">Animation</option></select></label>
+          <label>Name (optional)<input id="group-name" type="text" maxlength="120"></label>
+        </div>
+        <p id="group-count" role="status" aria-live="polite"></p>
+        <div id="group-members"></div>
+        <label class="group-review"><input id="group-reviewed" type="checkbox"> I reviewed this exact membership, type and name.</label>
+        <button id="group-save" disabled>Save group</button>
+        <button id="group-cancel">Cancel group draft</button>
+      </div>
+    </section>
     <div id="gallery"></div>
   </section>
+  </main>
+  <section id="editor-tab" hidden aria-labelledby="editor-title">
+    <div class="editor-heading"><h2 id="editor-title">Frame editor</h2>
+      <p id="editor-recording" role="status"></p>
+      <button id="editor-back">Back to gallery — preserve view</button>
+      <button id="stage-current" aria-pressed="false" aria-keyshortcuts="1">Stage current frame (1)</button>
+      <button id="editor-stage-save" aria-keyshortcuts="M">Group yellow frames (M)</button>
+      <p id="editor-stage-count" role="status"></p>
+    </div>
   <div class="workspace">
     <section class="viewer" aria-label="Frame viewer">
       <div class="stage">
@@ -178,7 +248,12 @@
       </div>
       <div class="position"><strong id="position">Frame</strong><span id="current-label">Unlabeled</span>
         <button id="trash-current">Move to Trash</button>
+        <label class="merge-current-controls">Merge destination
+          <select id="merge-current-select" aria-label="Merge destination for current frame"></select>
+        </label>
+        <button id="merge-current">Merge</button>
         <a id="original" target="_blank" rel="noopener">Full resolution</a></div>
+      <div id="current-category" aria-label="Exact frame category"></div>
       <input id="timeline" type="range" min="0" max="1" value="0" aria-label="Source frame timeline">
       <div class="transport">
         <button id="back-two-half">-2.5s</button><button id="back-two">-2s</button>
@@ -187,7 +262,7 @@
         <button id="next-two">+2s</button><button id="next-two-half">+2.5s</button>
         <label>Speed<select id="speed"><option value=".25">0.25x</option><option value=".5" selected>0.5x</option><option value="1">1x</option></select></label>
       </div>
-      <p class="hint">Arrow keys: one frame. Space: play/pause. K: keep. A: animation. R: repeat. U: unsure.</p>
+      <p class="hint">Arrow keys: one frame. Space: play/pause. K: keep. A: animation. R: repeat. U: unsure. 1: stage exact frame. M: group yellow frames. Editor navigation spans the whole recording without changing the gallery window.</p>
     </section>
     <aside>
       <section class="decision-panel">
@@ -216,6 +291,26 @@
       </section>
     </aside>
   </div>
-  </main>
+  </section>
+  <dialog id="cleanup-confirm" aria-labelledby="cleanup-confirm-title" aria-describedby="cleanup-confirm-summary">
+    <h3 id="cleanup-confirm-title">Confirm recoverable Trash cleanup</h3>
+    <p id="cleanup-confirm-summary"></p>
+    <p>Whole recording, not just the current page or review window. Preserve existing Trash, all decisions,
+      histories, groups, numbers, colors, categories and other recordings. Originals stay on disk.
+      No learning, export, model, Jira or closeout actions.</p>
+    <button id="cleanup-apply">Confirm move to Trash</button>
+    <button id="cleanup-cancel">Cancel — no changes</button>
+  </dialog>
+  <dialog id="group-dissolve-confirm" aria-labelledby="group-dissolve-title" aria-describedby="group-dissolve-summary">
+    <h3 id="group-dissolve-title">Confirm dissolving the source group</h3>
+    <p id="group-dissolve-summary" role="status"></p>
+    <p>Only this source group will be dissolved. The remaining frame stays individual unless it belongs
+      to another group. That group's category reference will be cleared; direct frame categories,
+      frame decisions, Trash, other groups and source media are unchanged.</p>
+    <div class="workspace-tools">
+      <button id="group-dissolve-approve">Confirm and continue</button>
+      <button id="group-dissolve-cancel">Cancel</button>
+    </div>
+  </dialog>
 </body>
 </html>
