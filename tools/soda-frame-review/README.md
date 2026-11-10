@@ -642,8 +642,8 @@ The finalized snapshot retains all 66 selected frames out of 17,804 source
 frames; 17,738 unselected frames are recoverably hidden in dashboard Trash.
 Label histories, source originals, other recordings and the `holdout` split
 are unchanged. Full-resolution copies and hashes are in
-`data/soda-approved-frames/20261027T173500826227Z/`. The saved
-[selection diagram](../../docs/soda-video-5-selection-diagram.html) contains
+`data/soda-approved-frames/20261027T173500826227Z/`. The local-only saved diagram
+`docs/soda-video-5-selection-diagram.html` contains
 all 66 frames, eight interpreted groups and 65 chronological edges.
 
 The existing 83 candidates match three selected frames exactly and 11/23/28
@@ -688,7 +688,8 @@ split were preserved. The 82 original-resolution copies total 26,176,980 bytes;
 each copied hash matches its original. Saved results:
 `data/soda-review-learning/20261027T175457593408Z/`; package:
 `data/soda-approved-frames/20261027T175457593408Z/`.
-The [saved diagram](../../docs/soda-video-6-selection-20261027T175457593408Z.html)
+The local-only saved diagram
+`docs/soda-video-6-selection-20261027T175457593408Z.html`
 contains 82 image nodes and its JSON/Mermaid exports retain 81 chronological
 edges. Chronology does not establish a tap, purchase or causal transition.
 

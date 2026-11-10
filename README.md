@@ -43,7 +43,8 @@ Version 2 usage is documented in the [six-page tutorial](docs/video-analysis-too
   collections, local QA drafts, optional Jira connector and selector learning.
 - Local review annotations, saved closeouts, approved-frame exports and
   workspace data are not included in this public snapshot.
-- Existing Soda HTML, JSON and Mermaid reports under `docs/`.
+- Only tool documentation belongs in `docs/`; generated recording reports,
+  diagrams and embedded frame previews are local-only and excluded from Git.
 - Local-video extraction entry point: `scripts/extract_new_recording.py`.
 - Frame-selection rules, corrections and limitations in the
   [existing tool README](tools/soda-frame-review/README.md).
@@ -62,6 +63,11 @@ local datasets with symlinks to another project.
 `data/` and `.ai-work/` are local and excluded from Git, including private
 drafts, models, snapshots and generated provenance. A fresh checkout of this
 repository does not include them.
+
+Historical `docs/soda-*` reports and chat `published-updates/` attachments are
+also excluded from Git. Keep source frames and recording-specific exports local;
+publish only application code, tests and tool documentation. Removing reports
+from the current tree does not erase them from earlier commits or release tags.
 
 Before extraction, the tool asks for the source video path, an existing local
 destination parent folder, and a recording name. It creates a timestamped

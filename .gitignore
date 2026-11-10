@@ -10,3 +10,5 @@ __pycache__/
 *.mkv
 *.webm
 *.log
+/docs/soda-*
+/published-updates/
